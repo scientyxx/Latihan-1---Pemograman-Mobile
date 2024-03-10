@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # Latihan 1 Pemograman Mobile
-=======
+
 
 A new Flutter project.
 
