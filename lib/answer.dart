@@ -11,7 +11,7 @@ class Answer extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 208, 184, 201)), // Mengubah properti primary menjadi backgroundColor
+        style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 255, 255, 255)), // Mengubah properti primary menjadi backgroundColor
         child: Text(answerText),
         onPressed: selectHandler,
       ),

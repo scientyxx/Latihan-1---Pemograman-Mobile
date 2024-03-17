@@ -8,37 +8,43 @@ class Result extends StatelessWidget {
 
  String get resultPhrase {
   String resultText;
-  if (resultScore <= 8) {
+  if (resultScore <= 10) {
     resultText = 'You scored $resultScore. Who are you?!';
-  } else if (resultScore <= 12) {
+  } else if (resultScore <= 20) {
     resultText = 'You scored $resultScore. Think we are closer🤔 ';
-  } else if (resultScore <= 16) {
-    resultText = 'You scored $resultScore. Good Job gaise😘';
+  } else if (resultScore <= 30) {
+    resultText = 'You scored $resultScore. Good Job gaise👌';
   } else {
-    resultText = 'You scored $resultScore. You got me Beb😍❤️';
+    resultText = 'You scored $resultScore. You got me Beb😍';
   }
   return resultText;
 }
 
 
   @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          Text(
-            resultPhrase + '/30',
-            style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
-          ),
-          ElevatedButton(
+Widget build(BuildContext context) {
+  return Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          resultPhrase,
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 20),
+          child: ElevatedButton(
             child: Text(
               'Restart Quiz!',
             ),
             onPressed: resetHandler,
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
+
+
 }

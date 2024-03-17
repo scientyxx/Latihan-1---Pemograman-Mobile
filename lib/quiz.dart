@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import './question.dart';
 import './answer.dart';
 
@@ -19,11 +18,20 @@ class Quiz extends StatelessWidget {
     return Column(
       children: [
         Question(
-          questions[questionIndex]['questionText'] as String, // Konversi ke String
+          questions[questionIndex]['questionText'] as String,
         ),
-        ...(questions[questionIndex]['answers'] as List<Map<String, Object>>).map((answer) {
-          return Answer(() => answerQuestion(answer['score'] as int), answer['text'] as String); // Konversi ke String dan int
-        }).toList()
+        SizedBox(height: 10), // Menambahkan jarak vertikal antara pertanyaan dan jawaban
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20), // Memberikan margin horizontal pada jawaban
+          child: Column(
+            children: (questions[questionIndex]['answers'] as List<Map<String, Object>>).map((answer) {
+              return Padding(
+                padding: EdgeInsets.symmetric(vertical: 5), // Memberikan jarak vertikal antara jawaban
+                child: Answer(() => answerQuestion(answer['score'] as int), answer['text'] as String),
+              );
+            }).toList(),
+          ),
+        ),
       ],
     );
   }

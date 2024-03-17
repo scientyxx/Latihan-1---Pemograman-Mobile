@@ -64,7 +64,26 @@ class _MyAppState extends State<MyApp> {
               'Fried Rice',
           'score': 0
         },
-        {'text': 'all are correct', 'score': 10},
+        {'text': 'None of the above is incorrect', 'score': 10},
+      ],
+    },
+    {
+      'questionText': 'What\'s my favorite drink?',
+      'answers': [
+        {
+          'text': 'Mineral Water',
+          'score': 10
+        },
+        {
+          'text': 'Soft Drinks',
+          'score': 0
+        },
+        {
+          'text':
+              'Tea',
+          'score': 0
+        },
+        {'text': 'Coffee', 'score': 0},
       ],
     },
   ];
@@ -106,7 +125,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 239, 163, 204),
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
           title: Text('Get To Know Me'),
         ),
         body: _questionIndex < _questions.length
