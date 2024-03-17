@@ -1,8 +1,8 @@
-# Latihan 1 Pemograman Mobile
+# Quiz App - Pemograman Mobile
 
+Aplikasi Flutter sederhana untuk menjalankan kuis.
 
-A new Flutter project.
+## Deskripsi
 
-## Getting Started
+Aplikasi ini adalah proyek sederhana yang dibuat menggunakan Flutter untuk menjalankan kuis sederhana. 
 
-This project is a starting point for a Flutter application.
